@@ -1,46 +1,105 @@
+/* Logo container */
 .logo {
-  position: relative;
-  width: 100%;
-  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 35px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+/* Logo image */
 .logo img {
-  position: absolute;
-  left: 100px;
-  top: 35px;
+  margin-left: 100px;
   width: 80px;
   height: auto;
 }
+
+/* Center text content */
 .text-content {
   text-align: center;
-  width: 100%;
-  display: inline-block;
+  flex-grow: 1; /* Take up the remaining space between logo and rank section */
 }
+
+/* Title and paragraph styling */
 .title-1, .title-2, p {
   margin: 0;
 }
+
 .title-1 {
   color: #eb4e35;
   font-weight: bold;
   font-size: 24px;
 }
+
 .title-2 {
   color: #2f7436;
   font-weight: bold;
   font-size: 24px;
 }
+
 p {
   font-size: 14px;
   color: #333;
 }
+
+/* Rank Section Styling */
+.rank-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+}
+
+/* Rank Content */
+.rank-content {
+  text-align: right;
+  animation: pulse 1.5s infinite;
+}
+
+/* Rank Title */
+.rank-title {
+  margin-right: 25px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #eb4e35;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* Rank Subtitle */
+.rank-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+  letter-spacing: 1px;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 /* Styling for marquee content */
 .scrolling-content {
-  margin-top: 15px;
+  margin-top: 10px;
   width: 100%;
   background-color: #e0f2f1;
   padding: 10px 0;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Hide any overflow from the marquee */
 }
 /* Button container styling */
 .button-container {
@@ -49,7 +108,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  z-index: 1;
+  z-index: 1; /* Ensure buttons are above the scrolling text */
   background-color: #e0f2f1;
   padding: 0 10px;
 }
@@ -65,8 +124,8 @@ p {
   color: #000;
   font-size: 16px;
   font-weight: bold;
-  white-space: nowrap;
-  margin-left: 70px;
+  white-space: nowrap; /* Prevent line breaks */
+  margin-left: 70px; /* Ensure space for buttons */
 }
 .marquee-text:hover{
   cursor: pointer;
