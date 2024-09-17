@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./image/vini image.jpg">
+  <title>vinith COLLEGE OF ENGINEERING AND TECHNOLOGY</title>
+  <link rel="stylesheet" href="./head.css">
+</head>
+<body>
+  <header>
+    <!--Logo content-->
+  <div class="logo">
+    <div class="logo-image">
+      <img src="./image/vini image.jpg" alt="vini Logo">
+    </div>
+    <div class="text-content">
+      <h1 class="title-1">vinith COLLEGE OF ENGINEERING</h1>
+      <h1 class="title-2">AND TECHNOLOGY</h1>
+      <p>ambani garden, Karur NH-47, Karur - 639 003,TN, India</p>
+      <p>(Approved by AICTE, New Delhi, Affiliated to Anna University, Chennai)</p>
+    </div>
+    <!-- Toggle Icon -->
+    <div class="toggle-bar">
+      <div class="toggle-icon">&#9776;</div>
+      <div class="close-icon">&times;</div>
+    </div>
+    <!-- Rank Section -->
+    <div class="rank-section">
+      <div class="rank-content">
+        <span class="rank-title">1st Rank in</span><br>
+        <span class="rank-subtitle">Anna University</span>
+      </div>
+    </div>
+  </div>
+    <!--Logo content End-->
+
+<!--Marquee Content-->
+  <div class="scrolling-content">
+    <div class="button-container">
+      <button class="marquee-button">Home</button>
+      <button class="marquee-button">Admissions</button>
+      <button class="marquee-button">Courses</button>
+      <button class="marquee-button">Contact Us</button>
+    </div>
+    <div class="marquee-wrapper">
+      <marquee behavior="scroll" direction="left" scrollamount="6" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" class="marquee-text">
+        Admissions Open for 2025-2026! Apply Now. | TNEA Counselling Code 2327...
+      </marquee>
+    </div>
+  </div>
+<!--Marquee Content End-->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Administration</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Admission</a></li>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Placement</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Navbar End-->
+</header>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBar = document.querySelector('.toggle-icon');
+  const closeBar = document.querySelector('.close-icon');
+  const navbar = document.querySelector('.navbar');
+
+  toggleBar.addEventListener('click', function() {
+    navbar.style.display = 'block';
+    toggleBar.style.display = 'none';
+    closeBar.style.display = 'block';
+  });
+
+  closeBar.addEventListener('click', function() {
+    navbar.style.display = 'none';
+    closeBar.style.display = 'none';
+    toggleBar.style.display = 'block';
+  });
+
+  // Reset navbar and toggle bar visibility on window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 770) {
+      navbar.style.display = 'block'; // Always show navbar above 770px
+      toggleBar.style.display = 'none';
+      closeBar.style.display = 'none';
+    } else {
+      navbar.style.display = 'none'; // Hide navbar below 770px
+      toggleBar.style.display = 'block'; // Show toggle bar below 770px
+      closeBar.style.display = 'none';
+    }
+  });
+});
+
+
+</script>
+</body>
+</html>
