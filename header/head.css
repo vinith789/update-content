@@ -1,3 +1,8 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
 /* Logo container */
 .logo {
   display: flex;
@@ -394,7 +399,7 @@ p {
     margin-top: 20px;
   }
   .rank-section {
-    margin-left: 0;
+    margin-left: 35px;
     margin-top: 20px;
     justify-content: center;
   }
@@ -431,7 +436,7 @@ p {
     overflow: hidden;
   }
   .marquee-text {
-    font-size: 12px;
+    font-size: 14px;
     padding: 0 5px;
   }
   .marquee-button {
@@ -442,33 +447,56 @@ p {
   /* Compress the entire marquee container */
   .scrolling-content {
     padding: 5px 0;
+  }
+  .button-container{
+    margin-left: -20px;
   }
   .marquee-container {
     padding: 10px;
   }
 }
 @media (max-width: 480px) {
-
-  .marquee-wrapper {
-    overflow: hidden;
+  .text-content h1{
+    font-size: 16px;
   }
-  .marquee-text {
-    font-size: 12px;
-    padding: 0 5px;
+  header .text-content p{
+    display: none;
   }
-  .button-container{
-  margin-left: -20px;
+  .rank-title{
+    font-size: 18px;
   }
+  .rank-subtitle{
+    font-size: 16px;
+  }
+  .scrolling-content {
+    background-color: white;
+    margin-top: -10px;
+  }
+  .button-container {
+    background-color: #e0f2f1;
+    display: flex;            /* Use flexbox for horizontal alignment */
+    justify-content: start;  /* Center the buttons */
+    flex-direction: row;      /* Keep buttons in one line */
+    width: 100%;              /* Full width for buttons */
+    padding: 5px;
+   }
   .marquee-button {
     font-size: 10px;
     padding: 4px 8px;
     width: auto;
   }
-  /* Compress the entire marquee container */
-  .scrolling-content {
-    padding: 5px 0;
+  .marquee-wrapper {
+    margin-top: 55px;        /* Increased space above marquee */
+    width: 100%;              /* Ensure marquee is 100% width */
+    overflow: hidden;         /* Prevent overflow if needed */
   }
-  .marquee-container {
-    padding: 10px;
+  .marquee-text {
+    font-size: 14px;         /* Adjust font size for marquee text */
+    line-height: 1.5;        /* Increase line height for spacing */
+    white-space: nowrap;      /* Prevent wrapping */
+    width: 100%;              /* Ensure marquee text takes full width */
+    margin-left: 10px;
   }
 }
+
+
