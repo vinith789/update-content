@@ -12,9 +12,12 @@ tabs.forEach((tab, index)=>{
       var line = document.querySelector('.line');
       line.style.width =e.target.offsetWidth + "px";
       line.style.left = e.target.offsetLeft + "px";
-      
+
       all_content.forEach((content)=>{content.classList.remove('active');});
       all_content[index].classList.add('active');
 
+
+
+      
   })
 })
